@@ -1,0 +1,21 @@
+{
+  "hosting": {
+    "public": "dist/abdulazizladan/browser",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "function": "ssr",
+        "destination": "/index.html"
+      }
+    ],
+    "functions": {
+      "source": "functions",
+      "runtime": "nodejs20"
+    }
+  }
+}
